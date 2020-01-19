@@ -41,12 +41,13 @@ document.getElementById("generate").addEventListener("click", function () {
 
 
 
+function copyToClipboard() {
+}
+  document.getElementById("copy").addEventListener("click", function () {
+    let textArea = document.getElementById("password");
+    password.select();
+    document.execCommand("copy");
 
-document.getElementById("copy").addEventListener("click", function() {
-  let textArea = document.getElementById("password");
-  password.select();
-  document.execCommand("copy");
 
-
-});
+  });
 
