@@ -18,17 +18,10 @@ const optionFunc = {
 }
 
 copy.addEventListener("click", () => {
-  let textarea = document.createElement("textarea");
-  let password = result.innerText;
-
-  if (!password) { return; }
-
-  textarea.value = password;
-  document.body.appendChild(textarea);
-  textarea.select();
+  let textArea = document.getElementById("password");
+  textArea.select();
   document.execCommand("copy");
-  textarea.remove();
-  alert('Password copied to clipboard');
+  alert("Password copied to clipboard");
 });
 
 generate.addEventListener("click", () => {
@@ -46,14 +39,14 @@ generate.addEventListener("click", () => {
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = "";
   let typesCount = lower + upper + number + symbol;
-  let typesArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+  let typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0]);
 
 
-  if(typesCount === 0) {
+  if (typesCount === 0) {
     return "";
   }
 
-  for(let i=0; i<length; i += typesCount) {
+  for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
       let funcname = Object.keys(type)[0];
       generatedPassword += optionFunc[funcname]();
@@ -64,14 +57,6 @@ function generatePassword(lower, upper, number, symbol, length) {
 
   return finalPassword;
 }
-
-
-/*var lowerCase = window.confirm("Lowercase character?")
-if (lowerCase) {
-  function writePassword()
-} else {
-  alert("next question")
-};*/
 
 function getRandomLower() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
