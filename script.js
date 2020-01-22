@@ -1,5 +1,22 @@
 var copy = document.getElementById("copy");
 var password = document.getElementById("password");
+var lower = document.getElementById("#lowerChoice");
+var upper = document.getElementById("#upperChoice");
+var number = document.getElementById("#numberChoice");
+var symbol = document.getElementById("#symbolChoice");
+var lengthOption = document.getElementById("#Length");
+
+
+
+
+var lowerCase = window.confirm("Lowercase character?")
+if (lowerCase) {
+  function writePassword()
+} else {
+  alert("next question")
+};
+
+
 
 function writePassword(max, min) {
   var passChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz#@!%&()/";
@@ -11,7 +28,7 @@ function writePassword(max, min) {
   return randPassword;
 }
 document.getElementById("generate").addEventListener("click", function () {
-  randomPassword = writePassword(16, 8);
+  randomPassword = writePassword(128, 8);
   document.getElementById("password").value = randomPassword;
 
 });
