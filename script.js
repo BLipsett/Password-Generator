@@ -5,7 +5,7 @@ var upper = document.getElementById("upperChoice");
 var number = document.getElementById("numberChoice");
 var symbol = document.getElementById("symbolChoice");
 var lengthOption = document.getElementById("length");
-var generate = document.getElementById("generate");
+var generateEl = document.getElementById("generate");
 
 
 
@@ -53,7 +53,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     return "";
   }
 
-  for(let i=0; i<length; i + typesCount) {
+  for(let i=0; i<length; i += typesCount) {
     typesArr.forEach(type => {
       let funcname = Object.keys(type)[0];
       generatedPassword += optionFunc[funcname]();
@@ -87,7 +87,7 @@ function getRandomNumber() {
 
 function getRandomSymbol() {
   let symbols = "!@#$%^&*()_+-={}[]:<>?/.,/-"
-  return String.fromCharCode[Math.floor(Math.random() * symbols.length)];
+  return symbols[Math.floor(Math.random() * symbols.length)];
 }
 
 
