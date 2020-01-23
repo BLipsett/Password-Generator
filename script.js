@@ -44,7 +44,18 @@ function generatePassword(lower, upper, number, symbol, length) {
 
   if (typesCount === 0) {
     return "";
+  } 
+
+  if (length < 8) {
+    alert("Password must be between 8 and 128 characters.");
+    return "";
   }
+
+  if (length > 128) {
+    alert("Password must be between 8 and 128 characters.");
+    return "";
+  }
+
 
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
