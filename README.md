@@ -3,4 +3,5 @@
 Then based off their selections and choice of length (between 8 and 128 characters). Generate a random password. If desired a "copy to clipboard" button then allows users to copy their generated password.
 <br>
 https://blipsett.github.io/Password-Generator/
-
+<br>
+![](images/Password-Generator.jpg)
