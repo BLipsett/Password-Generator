@@ -4,4 +4,4 @@ Then based off their selections and choice of length (between 8 and 128 characte
 <br>
 https://blipsett.github.io/Password-Generator/
 <br>
-![](images/Password-Generator.jpg)
+![](Images/Password-Generator.jpg)
